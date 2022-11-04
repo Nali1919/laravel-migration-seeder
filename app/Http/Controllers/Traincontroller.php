@@ -8,7 +8,7 @@ use App\_train;
 class Traincontroller extends Controller
 {
     public function index(){
-         $trains= _train::Where  ('Data_partenza', '=', '2023-11-30')->get();
+         $trains= _train::Where  ('Data_partenza', '=', '2001-07-28')->get();
         return view('welcome', compact('trains'));
     }
 }

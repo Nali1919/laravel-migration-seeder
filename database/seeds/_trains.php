@@ -2,7 +2,7 @@
 
 use Illuminate\Database\Seeder;
 use Faker\Generator as Faker;
-use APP\_train;
+use App\_train;
 
 class _trains extends Seeder
 {
@@ -13,10 +13,10 @@ class _trains extends Seeder
      */
     public function run(Faker  $faker)
     {
-        for($i=0; $i>100; $i++){
+        for($i=0; $i < 15; $i++){
 
-            $newtrain = new _train();
-            $newtrain->Azienda = $faker->words(1);
+            $newtrain = new _train() ;
+            $newtrain->Azienda = $faker->text();
             $newtrain->Stazione_di_partenza = $faker->country();
             $newtrain->Stazione_di_arrivo = $faker->country();
             $newtrain->Orario_di_partenza = $faker->time('H:i:s');
@@ -28,6 +28,8 @@ class _trains extends Seeder
             $newtrain->Cancellato = $faker->boolean();
             $newtrain->save();
 
+
         }
+
     }
 }
