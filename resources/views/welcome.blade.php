@@ -8,10 +8,11 @@
 </head>
 <body>
  @foreach ($trains as $train  )
-  <h1>{{$train['Data_partenza']}}</h1>
+
   <h1>{{$train['Azienda']}}</h1>
-  <h1>{{$train['Stazione_di_partenza']}}</h1>
-  <h1>{{$train['Stazione_di_arrivo']}}</h1>
+  <p>{{$train['Data_partenza']}}</p>
+  <p>{{$train['Stazione_di_partenza']}}</p>
+  <p>{{$train['Stazione_di_arrivo']}}</p>
 
 
  @endforeach

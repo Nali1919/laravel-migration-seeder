@@ -33,3 +33,5 @@ class _trains extends Seeder
 
     }
 }
+
+// fare il roolback e poi php migrate per avere tabelle
